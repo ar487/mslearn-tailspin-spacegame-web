@@ -8,7 +8,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+  wwwrootDir: 'Tailspin.SpaceGame.Web.Models/wwwroot'
   dotnetSdkVersion: '6.x'
 
 steps:
@@ -42,7 +42,7 @@ steps:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
-    vstsFeed: '$(System.TeamProject)/Space Game - web - Dependencies' 
+    vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Model' 
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
