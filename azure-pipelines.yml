@@ -2,9 +2,7 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'Default' 
-  demands:
-  - npm
+  name: Default
 
 variables:
   buildConfiguration: 'Release'
