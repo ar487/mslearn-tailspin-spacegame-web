@@ -2,7 +2,7 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-20.04'
   demands:
   - npm
 
@@ -42,7 +42,7 @@ steps:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
-    vstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Model' 
+    vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Model' 
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
