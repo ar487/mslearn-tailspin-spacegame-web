@@ -2,7 +2,7 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'Default' #Self_hosted_agent
+  vmImage: 'Default' 
   demands:
   - npm
 
