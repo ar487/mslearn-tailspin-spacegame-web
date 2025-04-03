@@ -12,8 +12,7 @@ steps:
   displayName: 'Use .NET SDK 6.x'
   inputs:
     packageType: sdk
-    version: '6.0.428'
-    installationPath: 'C:\Program Files\dotnet'
+    version: '6.x'
 
 - task: Npm@1
   displayName: 'Run npm install'
